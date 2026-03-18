@@ -1,13 +1,13 @@
-import api from './api'
+import API from './api'
 
 export const authService = {
   async register(data) {
-    const res = await api.post('/auth/register', data)
+    const res = await API.post('/auth/register', data)
     return res.data
   },
 
   async login(username, password) {
-    const res = await api.post('/auth/login', { username, password })
+    const res = await API.post('/auth/login', { username, password })
     return res.data
   },
 
